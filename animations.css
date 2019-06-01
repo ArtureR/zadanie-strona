@@ -1,0 +1,110 @@
+.logo {
+  animation: obrot 3s ease-in-out infinite alternate;
+}
+
+@keyframes obrot {
+  from {
+  }
+  to {
+    margin-left: 300px;
+    transform: rotate(360deg);
+  }
+}
+
+.first-contact-form .photo {
+  animation: obrot1 2s ease-in-out infinite alternate;
+}
+@keyframes obrot1 {
+  from {
+  }
+  to {
+    transform: perspective(900px) rotateX(45deg);
+  }
+}
+
+#projects,
+#clients,
+#countries {
+  animation: obrot2 3s ease-in-out infinite alternate;
+}
+
+@keyframes obrot2 {
+  from {
+  }
+  to {
+    font-size: 3vw;
+    transform: rotate(360deg);
+  }
+}
+
+#perspective-area {
+  perspective: 1000px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+#ankle {
+  position: absolute;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  transform: rotateX(-60deg);
+  animation: obracanie 7s infinite alternate;
+}
+.wall {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  backface-visibility: hidden;
+}
+.wall.front {
+  background: url("assets/polozenie.png");
+  transform: translateZ(50px);
+}
+.wall.back {
+  background: url("assets/polozenie.png");
+  transform: rotateX(180deg) translateZ(50px);
+}
+.wall.left {
+  background: url("assets/polozenie.png");
+  transform: rotateY(90deg) translateZ(50px);
+}
+.wall.right {
+  background: url("assets/polozenie.png");
+  transform: rotateY(-90deg) translateZ(50px);
+}
+.wall.up {
+  background: url("assets/polozenie.png");
+  transform: rotateX(90deg) translateZ(50px);
+}
+.wall.down {
+  background: url("assets/polozenie.png");
+  transform: rotateX(-90deg) translateZ(50px);
+}
+@keyframes obracanie {
+  from {
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(180deg);
+  }
+}
+
+.button:hover,
+input[type="submit"]:hover {
+  transform: scale(1.5);
+  transition: 2s;
+}
+
+.articles.right .photo:hover,
+.articles.left .first-article:hover {
+  animation: rotacja 3s;
+}
+@keyframes rotacja {
+    from {
+    }
+    to {
+      transform: rotateX(60deg) rotateY(60deg) rotateZ(90deg);
+    }
+  }
